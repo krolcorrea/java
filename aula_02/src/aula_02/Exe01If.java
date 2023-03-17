@@ -22,16 +22,16 @@ public class Exe01If {
 		if ((A+B)>C) {
 		System.out.println("A soma de A + B é maior que C");
 		}
-		if ((A+B)<C) {
+		else if ((A+B)<C) {
 		System.out.println("A soma de A + B é menor que C");
 		}
-		if ((A+B)==C){
+		else if ((A+B)==C){
 		System.out.println("A soma de A + B é igual a C");
 		}
 		
 	
 		leia.close();
 		
-	}
+	
 
-}
+}}
