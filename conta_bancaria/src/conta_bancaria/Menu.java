@@ -2,11 +2,20 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
+		
+		// teste da classe conta
+		Conta c1= new Conta(1, 123, 1, "Adriana", 100000.00f);
+		c1.visualizar();
+		c1.sacar(12000.00f);
+		c1.visualizar();
+		c1.depositar(50000.00f);
+		c1.visualizar();
 
 		Scanner leia = new Scanner(System.in);
 
