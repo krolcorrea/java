@@ -3,20 +3,36 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
-		
+
 		// teste da classe conta
-		Conta c1= new Conta(1, 123, 1, "Adriana", 100000.00f);
-		c1.visualizar();
-		c1.sacar(12000.00f);
-		c1.visualizar();
-		c1.depositar(50000.00f);
+		Conta c1 = new Conta(1, 123, 1, "Adriana", 100000.00f);
 		c1.visualizar();
 
+		ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "Gabriel", 100000.00f, 10000.00f);
+		cc1.visualizar();
+
+		cc1.sacar(100900);
+
+		cc1.visualizar();
+
+		cc1.depositar(2000);
+
+		cc1.visualizar();
+
+		ContaPoupanca cp1 = new ContaPoupanca(1, 124, 2, "Maria", 100000.00f,15);
+		cp1.visualizar();
+		cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(3000.0f);
+		cp1.visualizar();
+		
 		Scanner leia = new Scanner(System.in);
 
 		int opcao, numero, agencia, tipo, aniversario, numeroDestino;
@@ -171,7 +187,8 @@ public class Menu {
 			}
 			default -> System.out.println("\nOpção Inválida\n");
 			}
-
+			
+			leia.close();
 		}
 	}
 
@@ -180,6 +197,7 @@ public class Menu {
 		System.out.println("\nCarolina Correa da Silva");
 		System.out.println("Email: carolina.unila@gmail.com");
 		System.out.println("GitHub:https://github.com/krolcorrea");
+
 	}
-		
+
 }
