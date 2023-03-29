@@ -12,17 +12,17 @@ public class Menu {
 	public static void main(String[] args) {
 
 		// teste da classe conta
-		Conta c1 = new Conta(1, 123, 1, "Adriana", 100000.00f);
-		c1.visualizar();
-
-		ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "Gabriel", 100000.00f, 10000.00f);
+		ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "Adriana", 10000.0f, 1000.0f);
 		cc1.visualizar();
 
-		cc1.sacar(100900);
+		ContaCorrente cc2 = new ContaCorrente(1, 123, 1, "Gabriel", 100000.00f, 10000.00f);
+		cc2.visualizar();
 
-		cc1.visualizar();
+		cc2.sacar(100900);
 
-		cc1.depositar(2000);
+		cc2.visualizar();
+
+		cc2.depositar(2000);
 
 		cc1.visualizar();
 
